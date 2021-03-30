@@ -1,0 +1,1 @@
+更新　回転率を直近のものから表示するようにする。(displayRotationRateFromLatest)
