@@ -12,6 +12,7 @@ const workRecordIndex = {
   date: 0,
   rotationRate: 4,
   totalRotationNumber: 6,
+  roundBase: 7,
   machineName: 9,
   storeName: 10,
 };
@@ -92,10 +93,10 @@ function App() {
   const TableRowWorkRecord = filterByTargetName().map((workRecord, index) => {
     return (
       <tr key={index}>
-        <td>{index}</td>
         <td>{workRecord[workRecordIndex.date] === "" ? "" : format(new Date(workRecord[workRecordIndex.date]), "yyyy-MM-dd")}</td>
         <td>{workRecord[workRecordIndex.rotationRate]}</td>
         <td>{workRecord[workRecordIndex.totalRotationNumber]}</td>
+        <td>{workRecord[workRecordIndex.roundBase]}</td>
         <td>{workRecord[workRecordIndex.machineName]}</td>
         <td>{workRecord[workRecordIndex.storeName]}</td>
       </tr>
@@ -127,13 +128,13 @@ function App() {
             <Button variant="outline-secondary">絞り込み</Button>
           </InputGroup.Append>
         </InputGroup>
-        <Table striped bordered hover size="sm" className="w-50 m-auto">
+        <Table striped bordered hover size="sm" className="m-auto">
           <thead>
             <tr>
-              <th>#</th>
               <th>日付</th>
               <th>回転率</th>
               <th>総回転数</th>
+              <th>rb</th>
               <th>機種名</th>
               <th>店名</th>
             </tr>
