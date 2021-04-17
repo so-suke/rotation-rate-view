@@ -2,6 +2,7 @@
   "name": "rotation-rate-view",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://so-suke.github.io/rotation-rate-view/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,6 +15,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "date-fns": "^2.19.0",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
@@ -22,6 +24,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
